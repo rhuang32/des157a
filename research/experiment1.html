@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1 - Word Capitalizer</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the program output</h2>
+
+    <script>
+    /* I chose prompt 1, which takes a lowercase string and capitalizes the first letter
+       of each word while keeping the rest of the letters lowercase. It showcases my understanding of 
+       sequence, selection, and loop control structures. */
+
+    // SEQUENCE: Initialize variables and string
+    var inputString = "hi, my name is richie! welcome to my first experiment with js";
+    var words = inputString.split(" ");
+    var capitalizedWords = [];
+
+    // LOOP: Process each word in the array
+    for (var i = 0; i < words.length; i++) {
+        var currentWord = words[i];
+        
+        // SELECTION: Checks if word has at least one character
+        if (currentWord.length > 0) {
+            // Capitalizes first letter and adds rest of word
+            var capitalizedWord = currentWord[0].toUpperCase() + 
+                                currentWord.slice(1).toLowerCase();
+            capitalizedWords.push(capitalizedWord);
+        }
+    }
+
+    // SEQUENCE: Join words back together and output
+    var result = capitalizedWords.join(" ");
+    
+    console.log("Original string:", inputString);
+    console.log("Capitalized string:", result);
+    </script>
+</body>
+</html>
