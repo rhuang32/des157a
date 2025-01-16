@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Richie Huang Github</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -16,68 +16,90 @@
         <h2>DES 157A - Interactive Media II - Winter 2025</h2>
     </header>
 
+    <div id="banner">
+        <div class="gradient-background"></div>
+    </div>
+
     <main>
-        <div id="left-container">
-            <section class="research">
+        <section id="left-container">
+            <article class="research">
                 <h2>Research</h2>
-                <ul>
-                    <li><a href="../research/learningjournal.html">Learning Journal</a></li>
-                    <li><a href="../research/experiment1.html">Experiment 1</a></li>
-                    <li><a href="../research/experiment2.html">Experiment 2</a></li>
-                </ul>
-            </section>
+                <nav>
+                    <ul>
+                        <li><a href="../research/learningjournal.html">Learning Journal</a></li>
+                        <li><a href="../research/experiment1.html">Experiment 1</a></li>
+                        <li><a href="../research/experiment2.html">Experiment 2</a></li>
+                    </ul>
+                </nav>
+            </article>
 
-            <section class="everypicture">
-                <h2>Every Picture</h2>
-                <ul>
-                    <li><a href="../everypicture/experiments.html">Experiments</a></li>
-                    <li><a href="../everypicture/designcomp.html">Design Comp</a></li>
-                    <li><a href="../everypicture/codev1.html">Code Version 1</a></li>
-                    <li><a href="../everypicture/finalproject.html">Final Every Picture Project</a></li>
-                </ul>
-            </section>
-        </div>
-
-        <div id="middle-container">
-            <div class="face">
-                <div class="ear left"></div>
-                <div class="ear right"></div>
-                <div class="beanie"></div>
-                <div class="eyes">
-                  <div class="eye">
-                    <div class="pupil"></div>
-                  </div>
-                  <div class="eye">
-                    <div class="pupil"></div>
-                  </div>
-                </div>
-                <div class="nose"></div>
-                <div class="mouth"></div>
-              </div>
-            </section>
-        </div>
-
-        <div id="right-container">
-            <section class="madlib">
+            <article class="madlib">
                 <h2>MadLib</h2>
-                <ul>
-                    <li><a href="../madlib/designv1.html">Design Version 1</a></li>
-                    <li><a href="../madlib/designv2.html">Design Version 2</a></li>
-                    <li><a href="../madlib/codev1.html">Code Version 1</a></li>
-                    <li><a href="../madlib/finalproject.html">Final MadLib</a></li>
-                </ul>
-            </section>
-        
+                <nav>
+                    <ul>
+                        <li><a href="../madlib/designv1.html">Design Version 1</a></li>
+                        <li><a href="../madlib/designv2.html">Design Version 2</a></li>
+                        <li><a href="../madlib/codev1.html">Code Version 1</a></li>
+                        <li><a href="../madlib/finalproject.html">Final MadLib</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
 
-            <section class="gameon">
+        <section id="right-container">
+            <article class="everypicture">
+                <h2>Every Picture</h2>
+                <nav>
+                    <ul>
+                        <li><a href="../everypicture/experiments.html">Experiments</a></li>
+                        <li><a href="../everypicture/designcomp.html">Design Comp</a></li>
+                        <li><a href="../everypicture/codev1.html">Code Version 1</a></li>
+                        <li><a href="../everypicture/finalproject.html">Final Every Picture Project</a></li>
+                    </ul>
+                </nav>
+            </article>
+
+            <article class="gameon">
                 <h2>Game On</h2>
-                <ul>
-                    <li><a href="../gameon/designv1.html">Design Version 1</a></li>
-                    <li><a href="../gameon/designv2.html">Design Version 2</a></li>
-                    <li><a href="../gameon/codev1.html">Code Version 1</a></li>
-                    <li><a href="../gameon/finalproject.html">Final Game On</a></li>
-                </ul>
-            </section>
+                <nav>
+                    <ul>
+                        <li><a href="../gameon/designv1.html">Design Version 1</a></li>
+                        <li><a href="../gameon/designv2.html">Design Version 2</a></li>
+                        <li><a href="../gameon/codev1.html">Code Version 1</a></li>
+                        <li><a href="../gameon/finalproject.html">Final Game On</a></li>
+                    </ul>
+                </nav>
+            </article>
+        </section>
+
+        <section id="middle-container">
+            <figure class="face">
+                <div class="ear left" aria-hidden="true"></div>
+                <div class="ear right" aria-hidden="true"></div>
+                <div class="beanie" aria-hidden="true"></div>
+                <div class="eyes" aria-hidden="true">
+                    <div class="eye">
+                        <div class="pupil"></div>
+                    </div>
+                    <div class="eye">
+                        <div class="pupil"></div>
+                    </div>
+                </div>
+                <div class="nose" aria-hidden="true"></div>
+                <div class="mouth" aria-hidden="true"></div>
+            </figure>
+        </section>
+
+        <div class="basketball-container">
+            <input type="checkbox" id="ball-reset" class="ball-reset">
+            <label for="ball-reset" class="reset-btn">Reset Ball</label>
+            <div class="basketball">
+                <div class="lines">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
