@@ -86,13 +86,13 @@ header {
   width: 1100px;
   height: 250px;
   margin-top: 200px;
-  border-radius: 15px;
 }
 
 #banner, .gradient-background {
-  background: linear-gradient(300deg,deepskyblue,blue,#357abd);
+  background: linear-gradient(240deg,deepskyblue,blue,#357abd);
   background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  animation: gradient-animation 12s ease infinite;
+  border-radius: 15px;
 }
   
   @keyframes gradient-animation {
@@ -121,10 +121,10 @@ header h2:hover {
 /* Containers */
 #right-container {
   padding-top: 120px;
-  padding-right: 40px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 
 #middle-container {
@@ -137,11 +137,11 @@ header h2:hover {
 
 #left-container {
   padding-top: 120px;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-bottom: 60px;
   display: flex;
   flex-direction: column;
-  gap: 43px;
+  gap: 50px;
 }
 
 /* Content Sections */
@@ -149,7 +149,7 @@ header h2:hover {
 .madlib {
   background-color: #d9d9d9;
   padding: 60px;
-  padding-right: 60px;
+  padding-right: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   width: 100%;
@@ -351,8 +351,8 @@ article li a:hover {
 
 /* Basketball Animation */
 .basketball-container {
-  position: fixed;
-  bottom: 50px;
+  position: relative;
+  bottom: -80px;
   left: 0;
   width: 100%;
   z-index: 99;
@@ -408,14 +408,14 @@ article li a:hover {
 
 .reset-btn {
   position: absolute;
-  bottom: 100%;
-  right: 120px;
+  bottom: -120%;
+  right: 40px;
   margin-bottom: 10px;
   padding: 8px 16px;
   background: #357abd;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -442,7 +442,7 @@ article li a:hover {
 
 /* Initial roll animation */
 .ball-reset:not(:checked) ~ .basketball {
-  animation: initialRoll 4s linear forwards;
+  animation: initialRoll 3s linear forwards;
 }
 
 .ball-reset:not(:checked) ~ .reset-btn {
@@ -467,7 +467,7 @@ article li a:hover {
       transform: translateX(-100px) rotate(0deg);
   }
   100% {
-      transform: translateX(85vw) rotate(720deg); /* Stops at reset button */
+      transform: translateX(63vw) rotate(720deg); /* Stops at reset button */
   }
 }
 
@@ -487,7 +487,7 @@ article li a:hover {
       transform: translateX(-100px) rotate(0deg);
   }
   100% {
-      transform: translateX(85vw) rotate(720deg);
+      transform: translateX(63vw) rotate(720deg);
   }
 }
 
@@ -502,10 +502,6 @@ article li a:hover {
 
 footer {
   width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   height: 150px;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: url(../images/grid.png) repeat;
+    max-width: 1200px;
+    height: 750px;
+    font-family: "JetBrains Mono", serif;
+    margin: 0 auto;
+    --x: 50%;
+    --y: 50%;
+  }
+  main {
+    height: calc(750px - 100px);
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
