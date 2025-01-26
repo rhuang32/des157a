@@ -7,15 +7,17 @@
         body { 
             font-family: 'Manrope'; 
             text-align: center; 
-            padding: 20px;
-            padding-top: 250px;
-            background: hsla(238, 100%, 71%, 1);
-
-        background: linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%);
+            padding: 20px; 
+            background: linear-gradient(90deg, #575aff 0%, hsla(187, 100%, 89%, 1) 100%);
+            padding-top: 200px;
         }
-        #message { 
+        h1 {
+            color: #575aff;
+            font-size: 2.5rem;
+        }
+        #message, #reward { 
             margin: 20px; 
-            font-weight: bold; 
+            font-weight: bold;
         }
     </style>
 </head>
@@ -24,28 +26,50 @@
     <input type="number" id="guess-input">
     <button onclick="checkGuess()">Guess</button>
     <div id="message"></div>
+    <div id="reward"></div>
 
     <script>
-    // I created a simple number guessing game where the player tries to guess a random number
+    // My second Js experiment is a number guessing game that rewards the player with a random food treat
 
-    // Generate a random number between 1 and 10
-    var targetNumber = Math.floor(Math.random() * 10) + 1; 
-    let attempts = 0;
+    var foodTreats = [
+        'Pizza', 
+        'Ice Cream', 
+        'Chocolate Cake', 
+        'Burger', 
+        'Sushi', 
+        'Tacos', 
+        'Pancakes', 
+        'Smoothie', 
+        'Cookies', 
+        'Fruit Salad'
+    ];
+
+    var targetNumber = Math.floor(Math.random() * 10) + 1;
+    var attempts = 0;
 
     function checkGuess() {
         var guessInput = document.getElementById('guess-input');
         var messageDiv = document.getElementById('message');
+        var rewardDiv = document.getElementById('reward');
         var userGuess = parseInt(guessInput.value);
 
         attempts++;
 
-        if (userGuess === targetNumber) { // Correct guess
+        if (userGuess === targetNumber) {
             messageDiv.textContent = `Congratulations! You guessed right in ${attempts} attempts!`;
             messageDiv.style.color = 'green';
+
+            var randomTreat = foodTreats[Math.floor(Math.random() * foodTreats.length)];
+            rewardDiv.textContent = `Thanks for playing! Treat yourself to some ${randomTreat}! 🍽️`;
+            rewardDiv.style.color = 'blue';
+
+            // Disable further guessing
+            guessInput.disabled = true;
+            document.querySelector('button').disabled = true;
         } else if (userGuess < targetNumber) {
             messageDiv.textContent = 'Too low! Try again.';
             messageDiv.style.color = 'red';
-        } else {   // userGuess > targetNumber
+        } else {
             messageDiv.textContent = 'Too high! Try again.';
             messageDiv.style.color = 'red';
         }
