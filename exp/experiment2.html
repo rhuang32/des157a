@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Guessing Game</title>
+    <style>
+        body { 
+            font-family: 'Manrope'; 
+            text-align: center; 
+            padding: 20px;
+            padding-top: 250px;
+            background: hsla(238, 100%, 71%, 1);
+
+        background: linear-gradient(90deg, hsla(238, 100%, 71%, 1) 0%, hsla(295, 100%, 84%, 1) 100%);
+        }
+        #message { 
+            margin: 20px; 
+            font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <input type="number" id="guess-input">
+    <button onclick="checkGuess()">Guess</button>
+    <div id="message"></div>
+
+    <script>
+    // I created a simple number guessing game where the player tries to guess a random number
+
+    // Generate a random number between 1 and 10
+    var targetNumber = Math.floor(Math.random() * 10) + 1; 
+    let attempts = 0;
+
+    function checkGuess() {
+        var guessInput = document.getElementById('guess-input');
+        var messageDiv = document.getElementById('message');
+        var userGuess = parseInt(guessInput.value);
+
+        attempts++;
+
+        if (userGuess === targetNumber) { // Correct guess
+            messageDiv.textContent = `Congratulations! You guessed right in ${attempts} attempts!`;
+            messageDiv.style.color = 'green';
+        } else if (userGuess < targetNumber) {
+            messageDiv.textContent = 'Too low! Try again.';
+            messageDiv.style.color = 'red';
+        } else {   // userGuess > targetNumber
+            messageDiv.textContent = 'Too high! Try again.';
+            messageDiv.style.color = 'red';
+        }
+
+        guessInput.value = ''; // Clear input
+    }
+    </script>
+</body>
+</html>
