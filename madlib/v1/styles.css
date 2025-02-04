@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F6F1;
+    scroll-behavior: smooth;
+    font-family: "Manrope", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Coffee Beans Background */
+/* Coffee Beans Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../v1/images/Coffee\ Bean.png') repeat;
+    background-size: 200px;
+    filter: blur(4px);
+    animation: moveBeans 10s linear infinite, fadeBeans 6s ease-in-out infinite alternate;
+    z-index: -1; /* Keeps it behind everything */
+}
+
+/* Moves beans upwards */
+@keyframes moveBeans {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -100px; }
+}
+
+/* Fades the beans in and out */
+@keyframes fadeBeans {
+    0% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+    75% { opacity: 0.8; }
+    100% { opacity: 0.1; }
+}
+
+
+/* Parent container for both sections */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Left Section */
+.left-container {
+    flex: 1;
+    text-align: left;
+}
+
+.left-container h1 {
+    font-size: 80px;
+    font-weight: 800;
+    background: linear-gradient(94deg, rgba(91, 78, 72, 0.80) 1%, rgba(130, 122, 117, 0.80) 40.49%, rgba(149, 144, 140, 0.60) 64.18%, rgba(159, 155, 151, 0.50) 87.37%, rgba(168, 166, 162, 0.50) 99.71%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2px; /* Reduce space below h1 */
+}
+
+.left-container h2 {
+    font-size: 1.1rem;
+    margin-top: 0px; /* Reduce space above h2 */
+}
+
+
+/* Right Section (Form) */
+.form-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    max-width: 450px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.form-container:hover {
+    transform: perspective(600px) rotateX(8deg) translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+.form-container h3, 
+.form-container p {
+    text-align: left;
+}
+
+.form-container p {
+    color: rgba(0, 0, 0, 0.50);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.form-container h3 {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.input-form input {
+    width: 48%;  
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #C5AB9F;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+
+.form-container {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.25);
+    max-width: 450px;
+}
+
+
+.input-form button {
+    width: 100%;
+    background-color: #F9F6F1;
+    color: #C5AB9F;
+    color: #F9F6F1;
+    background-color: #C5AB9F;
+    font-weight: 800;
+    border: none;
+    padding: 12px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+  
+.input-form button:hover {
+    background-color: #F9F6F1;
+    color: #C5AB9F;
+}
+
+footer p {
+    padding-top: 50px;
+    padding-right: 875px;
+    margin: 0 auto;
+}
