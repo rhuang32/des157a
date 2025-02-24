@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luminaire Design Odyssey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="canvas" id="canvas">
+        <section class="wall-light" id="wallLight">
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </section>
+        <div class="splash-screen" id="splashScreen"></div>
+        <header class="header" id="header">Showcasing my favorite CLTC lighting creations</header>
+        <section class="gallery" id="gallery">
+            <article class="image-container" data-story="Yuan">
+                <img src="images/yuanlamp.png" alt="Yuan Lamp">
+                <div class="overlay-visual"></div>
+            </article>
+            <article class="image-container" data-story="Ripple">
+                <img src="images/ripple.png" alt="Ripple Lamp">
+                <div class="overlay-visual"></div>
+            </article>
+            <article class="image-container" data-story="Shinzo">
+                <img src="images/shinzo.png" alt="Shinzo Lamp">
+                <div class="overlay-visual"></div>
+            </article>
+            <article class="image-container" data-story="Lennox">
+                <img src="images/lennox.png" alt="Lennox Lamp">
+                <div class="overlay-visual"></div>
+            </article>
+            <article class="image-container" data-story="Gravsten">
+                <img src="images/gravsten.png" alt="Gravsten">
+                <div class="overlay-visual"></div>
+            </article>
+
+        </section>
+        <div class="interaction-hint" id="interactionHint">Hover or click the lights to explore my favorite student projects!</div>
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <header class="overlay-header">
+                    About the Project 
+                    <button class="close-button" id="closeButton">X</button>
+                </header>
+                <section class="overlay-body">
+                    <img class="overlay-image" id="overlayImage" src="" alt="Fixture Image">
+                    <p class="overlay-description" id="overlayDescription"></p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

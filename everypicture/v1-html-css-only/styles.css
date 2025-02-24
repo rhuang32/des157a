@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050505, #1a1a2a, #2c2c3c);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.canvas {
+    width: 1200px;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    perspective: 1000px;
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1), rgba(0, 0, 0, 0.8));
+    animation: subtleGlow 10s infinite alternate;
+}
+
+@keyframes subtleGlow {
+    0% { background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1), rgba(0, 0, 0, 0.8)); }
+    50% { background: radial-gradient(circle at center, rgba(147, 112, 219, 0.1), rgba(0, 0, 0, 0.8)); }
+    100% { background: radial-gradient(circle at center, rgba(255, 87, 51, 0.1), rgba(0, 0, 0, 0.8)); }
+}
+
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00d4ff;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+    z-index: 30;
+}
+
+.gallery {
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(26, 26, 42, 0.7), rgba(70, 130, 180, 0.5));
+    border-radius: 25px;
+    box-shadow: inset 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+.image-container {
+    width: 300px;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.7);
+}
+
+.image-container:hover img {
+    transform: scale(1.15);
+}
+
+/* CSS-Only Overlay Simulation (Hover-Based) */
+.image-container:hover .overlay-visual {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay-visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Overlay Content for Each Fixture (Using data-story) */
+.image-container[data-story="Ripple"] .overlay-visual::after {
+    content: "RIPPLE was designed by student designer Sarika Kumar who crafted a serene, layered acrylic chandelier that mimics the gentle ripples of water. I loved her ambitious approach as it features a meditative glow that invites viewers to pause and reflect on its artistic beauty.";
+}
+
+.image-container[data-story="Shinzo"] .overlay-visual::after {
+    content: "SHINZO, was designed by student designer Cameron Gillern, who drew on the Metabolist movement in architecture as seen in Frank Lloyd Wright and Kisho Kurokawa’s work. This was my favorite fixture that was documented. This fixture is special to the designer because it captures their love for minimalist elegance and the foundational joy of working with light and texture, serving as both a functional lamp and a decorative piece that evokes quiet sophistication.";
+}
+
+.image-container[data-story="Lennox"] .overlay-visual::after {
+    content: "LENNOX, was designed by student designer Marceline Tang, who aimed to create a sleek, intimate fixture that evokes warmth through a twisting, soft fabric design. This fixture is special to the designer because it reflects Marceline’s passion for simple, elegant design and their emotional connection to its warm, private atmosphere, a piece they envision keeping for years as a testament to their creative journey.";
+}
+
+.overlay {
+    display: none; /* Hidden by default, as hover handles overlays */
+}
+
+.overlay-content, .overlay-header, .overlay-body, .close-button, .overlay-image, .overlay-description {
+    display: none; /* Hidden since hover-based overlays use .overlay-visual */
+}
+
+/* Interaction Hint */
+.interaction-hint {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00d4ff;
+    font-size: 16px;
+    font-weight: 300;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.8);
+    opacity: 0.9;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    z-index: 25;
+    animation: floatHint 4s ease-in-out infinite;
+}
+
+@keyframes floatHint {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-10px); }
+}
