@@ -3,56 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminaire Design Odyssey</title>
+    <title>Vertical Buttons with Flash and Case Studies</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <main class="canvas" id="canvas">
-        <section class="wall-light" id="wallLight">
-            <div class="progress-bar-container">
-                <div class="progress-bar" id="progressBar"></div>
-            </div>
-        </section>
-        <div class="splash-screen" id="splashScreen"></div>
-        <header class="header" id="header">Showcasing my favorite CLTC lighting creations</header>
-        <section class="gallery" id="gallery">
-            <article class="image-container" data-story="Yuan">
-                <img src="images/yuanlamp.png" alt="Yuan Lamp">
-                <div class="overlay-visual"></div>
-            </article>
-            <article class="image-container" data-story="Ripple">
-                <img src="images/ripple.png" alt="Ripple Lamp">
-                <div class="overlay-visual"></div>
-            </article>
-            <article class="image-container" data-story="Shinzo">
-                <img src="images/shinzo.png" alt="Shinzo Lamp">
-                <div class="overlay-visual"></div>
-            </article>
-            <article class="image-container" data-story="Lennox">
-                <img src="images/lennox.png" alt="Lennox Lamp">
-                <div class="overlay-visual"></div>
-            </article>
-            <article class="image-container" data-story="Gravsten">
-                <img src="images/gravsten.png" alt="Gravsten">
-                <div class="overlay-visual"></div>
-            </article>
-
-        </section>
-        <div class="interaction-hint" id="interactionHint">Hover or click the lights to explore my favorite student projects!</div>
-        <div class="overlay" id="overlay">
-            <div class="overlay-content">
-                <header class="overlay-header">
-                    About the Project 
-                    <button class="close-button" id="closeButton">X</button>
-                </header>
-                <section class="overlay-body">
-                    <img class="overlay-image" id="overlayImage" src="#" alt="Fixture Image">
-                    <p class="overlay-description" id="overlayDescription"></p>
-                </section>
-            </div>
+    <h1>A photonic gallery of luminaires</h1>
+    <h3>*Hover over a button to reveal a stunning luminaire. Then, click the button the reveal its unique story.</h3>
+    <p>As a digital media and communications assistant at the CLTC, I helped photograph the final prototypes for Professor Jae Suk's lighting design classes. These projects were especially exciting to capture as it was my first time analyzing the cool intricacies behind how light is formed and its implications on our behavioral state. Here are some of my favs that captured my eyes.</p>
+   
+    <section id="one">
+        <div class="button-container">
+            <button class="side-btn" overlay="gravsten" img="images/gravsten.png">GRAVSTEN</button>
+            <button class="side-btn" overlay="DCP_0682" img="images/lennox.png">LENNOX</button>
+            <button class="side-btn" overlay="IMG_0025" img="images/ripple.png">RIPPLE</button>
+            <button class="side-btn" overlay="IMG_0202" img="images/shinzo.png">SHINZO</button>
+            <button class="side-btn" overlay="IMG_0215" img="images/yuanlamp.png">YUAN</button>
         </div>
-    </main>
-    <script src="script.js"></script>
+        <div class="flash-container"></div>
+    </section>
+
+    <!-- Overlays with Case Study Format -->
+    <section class="overlay hidden" id="gravsten">
+        <article>
+            <h2>About the Project: GRAVSTEN</h2>
+            <div class="content-wrapper">
+                <img src="images/gravsten.png" alt="Gravsten">
+                <div class="overlay-content">
+                    <h3>Jordan Blandino</h3>
+                    <p>Jordan’s Gravsten Lantern, inspired by a Swedish “tombstone,” casts this warm, solemn glow with layered light slipping through its geometric, stone-like panels of textured gray 3-Form Varia EcoResin—it’s like a quiet sentinel standing guard in the dark. My favorite part is how the dimmable LED strips and birch dowel construction make it feel so luxe yet modular, like you could tweak it into a pendant or wall fixture and it’d still hold that powerful, understated vibe.</p>
+                </div>
+            </div>
+            <button class="corner close">X</button>
+        </article>
+    </section>
+
+    <section class="overlay hidden" id="DCP_0682">
+        <article>
+            <h2>About the Project: LENNOX</h2>
+            <div class="content-wrapper">
+                <img src="images/lennox.png" alt="Lennox">
+                <div class="overlay-content">
+                    <h3>Marceline Tang</h3>
+                        <p>Marceline’s Lennox table lamp is this beautifully simple twist of soft material—belt, I think?—with a copper band permeating through, creating a warm cozy and bold glow My favorite thing is how she obsessed over even light distribution. It took her a few weeks but once she finalized how she would tweak the shape until it hit right, it was molded into this beautiful shape that was probably my favorite toward the end.</p>
+                </div>
+            </div>
+            <button class="corner close">X</button>
+        </article>
+    </section>
+
+    <section class="overlay hidden" id="IMG_0025">
+        <article>
+            <h2>About the Project: RIPPLE</h2>
+            <div class="content-wrapper">
+                <img src="images/ripple.png" alt="Ripple">
+                <div class="overlay-content">
+                    <h3>Jordan Blandino</h3>
+                            <p>Sarika’s Ripple pendant fixture, with its 108 layers of stacked acrylic wrapped in color-changing LED strips, feels like a mesmerizing dance of light that pulls you in, inspired by Phillip K Smith III’s dreamy installations. My favorite part is how she sanded the acrylic rings to hide the glue mess—such a clutch move that made it glow cleaner than I’d ever expect from a first shot at light art.</p>
+                </div>
+            </div>
+            <button class="corner close">X</button>
+        </article>
+    </section>
+
+    <section class="overlay hidden" id="IMG_0202">
+        <article>
+            <h2>About the Project: SHINZO</h2>
+            <div class="content-wrapper">
+                <img src="images/shinzo.png" alt="Shinzo">
+                <div class="overlay-content">
+                    <h3>Cameron Gillern</h3>
+                        <p>Cameron’s Shinzo table lamp, channeling Frank Lloyd Wright and Kisha Kurokawa’s metabolism vibes, mixes recycled resin and plywood into this organic-yet-geometric tower that exudes quiet confidence. I remember obsessing over the floating renders and how the LED strips play off the texture that makes you wanna stare at it from every angle.</p>
+                </div>
+            </div>
+            <button class="corner close">X</button>
+        </article>
+    </section>
+
+    <section class="overlay hidden" id="IMG_0215">
+        <article>
+            <h2>About the Project: YUAN</h2>
+            <div class="content-wrapper">
+                <img src="images/yuanlamp.png" alt="Yuanlamp">
+                <div class="overlay-content">
+                    <h3>Kendra Tung</h3>
+                    <p>Kendra's Yuan circle lamp blends vintage heritage with a sleek LED edge, lighting up the night in a way that feels both timeless and fresh, like a nod to tradition. I love how the clean acrylic structure catches the light—there’s something so satisfying about it. Its simplicity is second to none.</p>
+                </div>
+            </div>
+            <button class="corner close">X</button>
+        </article>
+    </section>
 </body>
 </html>

@@ -1,0 +1,18 @@
+body {
+    background-color: #777;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+img {
+    width: 50%;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    padding-left: 350px;
+
+  }
