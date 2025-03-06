@@ -1,0 +1,287 @@
+/* CSS RESET (replaced Normalize with manual reset for clarity) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul,
+nav ol {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+a,
+button,
+label,
+input {
+    font-family: "Anton", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* END RESET */
+
+body {
+    background: url(../v1-html-css-only/images/background.png) no-repeat center center fixed;
+    background-color: #777;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scrolling */
+}
+
+.container {
+    display: flex;
+    width: 1200px;
+    height: 750px; /* Fixed height to match viewport */
+    margin: 0 auto; /* Center the container */
+    position: relative;
+    overflow: hidden; /* Prevent container scrolling */
+}
+
+.game-on {
+    position: absolute;
+    top: 38%;
+    left: -30px;
+    transform: translateY(-50%) rotate(90deg);
+    color: #fff;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 3.6rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.main {
+    flex: 1;
+    position: relative;
+    height: 100%; /* Full height of container */
+    overflow: hidden; /* Prevent scrolling within main */ /* Recede left */ /* Court background color */
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    width: 100%;
+    height: 110px;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-left,
+.player-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-left {
+    left: 60%;
+}
+
+
+.start-ball {
+    position: absolute;
+    top: -100%;
+    left: -160%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.button, .new-game {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    padding-left: 20px;
+    top: -80%;
+}
+
+.new-game {
+    position: absolute;
+    top: -130%;
+    left: -330%;
+    z-index: 1;
+}
+
+.score {
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.orange {
+    background: #F5A623;
+}
+
+.purple {
+    background: #800080;
+}
+
+.title {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.game-state {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    z-index: 1;
+}
+
+.winner {
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: 400;
+    top:  -160%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+}
+
+
+
+.players {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -10%;
+}
+
+.lebron,
+.kobe {
+    width: 120px;
+    position: absolute;
+}
+
+.lebron {
+    bottom: 100px;
+    left: 400px;
+}
+
+.kobe {
+    bottom: 100px;
+    right: 350px;
+}
+
+.hoop {
+    position: absolute;
+    top: 20%;
+    left: 95%;
+}
+
+
+.crowd {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding-left: 100px;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.crowd-member {
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye {
+    width: 4px;
+    height: 4px;
+    background-color: #000;
+    position: absolute;
+    border-radius: 0; /* Square for pixelated look */
+}
+
+.eye.left {
+    left: 8px;
+    top: 10px;
+}
+
+.eye.right {
+    right: 8px;
+    top: 10px;
+}
+
+.mouth {
+    width: 8px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 18px;
+    transform: translateX(-50%);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 450px;
+    width: 400px;
+    z-index: 1;
+}
+
+.score-box {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.score-box:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.action {
+    background: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    padding: 5px 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.action:hover {
+    background-color: #fff;
+    color: #000;
+}
