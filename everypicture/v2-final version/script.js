@@ -9,7 +9,7 @@
         const button = buttons[i];
         button.addEventListener('mouseover', function(event) {
             const target = event.target;
-            const imgSrc = target.getAttribute('img');
+            const imgSrc = target.getAttribute('data-img');
             const img = document.createElement('img');
             img.src = imgSrc;
             img.className = 'flash-image';
@@ -32,7 +32,7 @@
         button.addEventListener('click', function(event) {
             event.preventDefault();
             const target = event.target;
-            const overlayId = target.getAttribute('overlay');
+            const overlayId = target.getAttribute('data-overlay');
             if (overlayId) {
                 const currentOverlay = document.querySelector('.overlay.showing');
                 if (currentOverlay) currentOverlay.className = 'overlay hidden';

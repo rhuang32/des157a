@@ -18,16 +18,17 @@
    
     <section id="one">
         <div class="button-container">
-            <button class="side-btn" overlay="gravsten" img="images/gravsten.png">GRAVSTEN</button>
-            <button class="side-btn" overlay="DCP_0682" img="images/lennox.png">LENNOX</button>
-            <button class="side-btn" overlay="IMG_0025" img="images/ripple.png">RIPPLE</button>
-            <button class="side-btn" overlay="IMG_0202" img="images/shinzo.png">SHINZO</button>
-            <button class="side-btn" overlay="IMG_0215" img="images/yuanlamp.png">YUAN</button>
+            <!-- I changed overlay and img tag to data-overlay and data-img to make it valid. Js is also updated on the target.getAttribute lines 12 and 35 -->
+            <button class="side-btn" data-overlay="gravsten" data-img="images/gravsten.png">GRAVSTEN</button>
+            <button class="side-btn" data-overlay="lennox" data-img="images/lennox.png">LENNOX</button>
+            <button class="side-btn" data-overlay="ripple" data-img="images/ripple.png">RIPPLE</button>
+            <button class="side-btn" data-overlay="shinzo" data-img="images/shinzo.png">SHINZO</button>
+            <button class="side-btn" data-overlay="yuan" data-img="images/yuanlamp.png">YUAN</button>
         </div>
         <div class="flash-container"></div>
     </section>
 
-    <!-- Overlays with Case Study Format -->
+    
     <section class="overlay hidden" id="gravsten">
         <article>
             <h2>About the Project: GRAVSTEN</h2>
@@ -42,7 +43,7 @@
         </article>
     </section>
 
-    <section class="overlay hidden" id="DCP_0682">
+    <section class="overlay hidden" id="lennox">
         <article>
             <h2>About the Project: LENNOX</h2>
             <div class="content-wrapper">
@@ -56,7 +57,7 @@
         </article>
     </section>
 
-    <section class="overlay hidden" id="IMG_0025">
+    <section class="overlay hidden" id="ripple">
         <article>
             <h2>About the Project: RIPPLE</h2>
             <div class="content-wrapper">
@@ -70,7 +71,7 @@
         </article>
     </section>
 
-    <section class="overlay hidden" id="IMG_0202">
+    <section class="overlay hidden" id="shinzo">
         <article>
             <h2>About the Project: SHINZO</h2>
             <div class="content-wrapper">
@@ -84,7 +85,7 @@
         </article>
     </section>
 
-    <section class="overlay hidden" id="IMG_0215">
+    <section class="overlay hidden" id="yuan">
         <article>
             <h2>About the Project: YUAN</h2>
             <div class="content-wrapper">
