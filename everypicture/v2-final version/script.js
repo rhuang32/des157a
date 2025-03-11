@@ -1,6 +1,7 @@
 (function () {
     'use strict';
 
+    console.log('reading js');
     // Flash and Button Interactions
     const flashContainer = document.querySelector('.flash-container');
     const buttons = document.querySelectorAll('.side-btn');
