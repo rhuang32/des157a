@@ -28,6 +28,8 @@ body {
 
 
 .container {
+    /* move background image to here */
+    
     display: flex;
     width: 1200px;
     height: 750px; /* Fixed height to match viewport */
@@ -97,6 +99,178 @@ body {
 .start-ball.hidden {
     display: none;
 }
+
+/* Animation for LeBron shooting (left to right) */
+@keyframes toBasketLeft {
+    0% {
+        transform: translateX(0) translateY(0);
+      }
+    
+    5% {
+        transform: translateX(-100px) translateY(150px);
+    }
+    10% {
+        transform: translateX(-200px) translateY(200px);
+    }
+    15% {
+        transform: translateX(-300px) translateY(350px);
+    }
+    20% {
+        transform: translateX(-400px) translateY(400px);
+    }
+    25% {
+        transform: translateX(-500px) translateY(500px);
+    }
+    30% {
+
+    }
+    35% {
+
+    }
+
+    40% {
+
+    }
+
+    45% {
+
+    }
+
+    50% {
+
+    }
+
+    55% {
+
+    }
+
+    60% {
+
+    }
+
+    65% {
+
+    }
+
+    70% {
+
+    }
+
+    75% {
+        
+    }
+
+    80% {
+        
+    }
+
+    85% {
+        
+    }
+
+    90% {
+        
+    }
+
+    95% {
+        
+    }
+
+    100% {
+        
+    }
+}
+
+@keyframes toBasketRight {
+    
+    0% {
+        transform: translateX(0) translateY(0);
+      }
+    
+    5% {
+        transform: translateX(-100px) translateY(150px);
+    }
+    10% {
+        transform: translateX(-200px) translateY(200px);
+    }
+    15% {
+        transform: translateX(-300px) translateY(350px);
+    }
+    20% {
+        transform: translateX(-400px) translateY(400px);
+    }
+    25% {
+        transform: translateX(-500px) translateY(500px);
+    }
+    30% {
+
+    }
+    35% {
+
+    }
+
+    40% {
+
+    }
+
+    45% {
+
+    }
+
+    50% {
+
+    }
+
+    55% {
+
+    }
+
+    60% {
+
+    }
+
+    65% {
+
+    }
+
+    70% {
+
+    }
+
+    75% {
+        
+    }
+
+    80% {
+        
+    }
+
+    85% {
+        
+    }
+
+    90% {
+        
+    }
+
+    95% {
+        
+    }
+
+    100% {
+        
+    }
+}
+
+.animate-to-basket-left {
+    animation: toBasketLeft 1s ease forwards;
+}
+
+.animate-to-basket-right {
+    animation: toBasketRight 3s ease forwards;
+}
+
+
 
 .popup {
     position: absolute;
@@ -293,3 +467,5 @@ body {
     background-color: #fff;
     color: #000;
 }
+
+
