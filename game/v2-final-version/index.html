@@ -29,7 +29,14 @@
                     <p>K.Bryant</p>
                     <div class="score purple">0</div>
                 </section>
+                <input type="range" class="volume-slider" min="0" max="100" value="25">
             </header>
+
+            <section class="rules-overlay">
+                <button class="close-btn">×</button>
+                <h2>Game Rules</h2>
+                <p>Welcome to King vs Mamba! Where you will role-play a 1:1 match with two of the greatest basketball players of all time. The rules are simple. Take turns shooting the ball. You can score 1-4 points per shot with a chance to roll a 0, which resets your total score to 0. First to 21 wins! Pass to bank your points and switch players. Click <strong>'Start a new game'</strong></p>
+            </section>
 
             <section class="game-state">
                 <h2 class="winner"></h2>
@@ -54,37 +61,39 @@
                         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_13_158" result="shape"/>
                       </filter>
                     </defs>
-                  </svg>
+                </svg>
                 <button class="new-game">Start a new game</button>
             </section>
 
             <section class="crowd">
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcpurple.png" alt="crowd member"></figure>
-                <figure class="crowd-member"><img src="images/npcmaroon.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc3.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc4.png" alt="crowd member"></figure>
+                <figure class="crowd-member"><img src="images/npc1.png" alt="crowd member"></figure>
+
+
+              
+
+
             </section>
 
             <section class="players">
@@ -110,14 +119,17 @@
                     <line y1="-0.5" x2="47" y2="-0.5" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 34 102)" stroke="white"/>
                     <line y1="-0.5" x2="47" y2="-0.5" transform="matrix(-1.19249e-08 -1 -1 1.19249e-08 44 102)" stroke="white"/>
                     <line y1="-0.5" x2="47" y2="-0.5" transform="matrix(4.37114e-08 1 1 -4.37114e-08 19 55)" stroke="white"/>
-                  </svg>
+                </svg>
             </section>
 
-            <footer class="controls">
+            <section class="controls">
                 <div class="score-box">0</div>
                 <button class="action">Take shot</button>
                 <button class="action">Pass ball</button>
-            </footer>
+                <footer>
+                    <p> <a href="https://freesound.org" target="_blank" rel="noopener noreferrer">Audio Source</a></p>
+                </footer>
+            </section>
         </section>
     </main>
 </body>
